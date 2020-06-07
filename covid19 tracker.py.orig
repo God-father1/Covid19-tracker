@@ -25,7 +25,7 @@ df_countries = df_countries.drop_duplicates(subset = ['Country'])
 df_countries = df_countries[df_countries['total_cases']>0]
 # Create the Choropleth
 fig = go.Figure(data=go.Choropleth(
-	locations = df_countries['Country'],
+    locations = df_countries['Country'],
     locationmode = 'country names',
     z = df_countries['total_cases'],
     colorscale = 'Reds',
